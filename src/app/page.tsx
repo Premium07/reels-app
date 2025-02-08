@@ -1,7 +1,26 @@
+"use client";
+import { apiClient } from "@/lib/api-client";
+import { IVideo } from "@/models/Video";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [videos, setVideos] = useState<IVideo[]>([]);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const data = await apiClient.getVideos();
+        setVideos(data);
+      } catch (error) {
+        throw error;
+      }
+    };
+    fetchVideos();
+  }, []);
+
   return (
-    <div className="p-20">
-      <h1 className="text-center">Welcome to Reels App.</h1>
+    <div className="">
+      <h1>Home Page</h1>
     </div>
   );
 }

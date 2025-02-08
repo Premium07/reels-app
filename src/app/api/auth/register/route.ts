@@ -23,13 +23,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    await User.create({
+    const user = await User.create({
       email,
       password,
     });
 
     return NextResponse.json(
-      { message: "User registered successfully" },
+      { user: user.email, message: "User registered successfully" },
       { status: 201 }
     );
   } catch (error) {
