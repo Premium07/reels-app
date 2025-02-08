@@ -34,8 +34,8 @@ export default function Login() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center p-4">
-      <div className=" rounded-2xl shadow-lg max-w-md w-full p-8">
+    <section className=" flex items-center justify-center p-4 min-h-screen">
+      <div className=" max-w-md w-full p-8">
         <h2 className="text-3xl font-bold text-gray-400 mb-8 text-center">
           Login
         </h2>

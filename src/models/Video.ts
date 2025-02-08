@@ -14,7 +14,7 @@ export interface IVideo {
   controls?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
-  transformation: {
+  transformation?: {
     width: number;
     height: number;
     quality?: number;
